@@ -7,9 +7,9 @@
 // ------------------------------------------------------------
 // 1. GEMINI API CONFIGURATION (FIX ADDED HERE)
 // ------------------------------------------------------------
-// NOTE: This key is exposed in front-end code! For a production app, 
-// this should be moved to a secure backend or proxy.
-const GEMINI_API_KEY = "AIzaSyCwmxPaMj4KXqDGeR-XiWxMgD6pCLnD1gc"; // <<< REPLACE THIS WITH YOUR REAL KEY
+
+// *NOTED* GEMINI API KEY WONT BE PLACE HERE DUE TO SECURITY.
+const GEMINI_API_KEY = "Replace this with your own GEMINI KEY PRODUCT"; // <<< REPLACE THIS WITH YOUR REAL KEY
 const GEMINI_MODEL = "gemini-2.5-flash"; // A fast, capable model (supports vision)
 const GEMINI_BASE_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
@@ -1381,4 +1381,5 @@ if (goalContinueButton) {
         
         showCustomAlert(`Your personalized ${selectedGoal} plan is ready! Scroll down to view your targets.`, 'Plan Ready', '🚀');
     });
+
 }
