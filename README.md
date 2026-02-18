@@ -29,5 +29,8 @@ Technical Stack
 
 ---
 How It Works
-1. Onboarding : Users create a secure account and provide vital stage (age, weight, height,                      activity level).
-
+1. Onboarding   : Users create a secure account and provide vital stage (age, weight, height,                      activity level).
+2. Analysis     : The system calculates the user's BMR, TDEE, and estimated Bodyfat percentage.
+3. Plannning    : Based on the selected goal, the app generates a "Receipt" style plan detailing                   daily caloric and macronutrient targets
+4. Interaction  : Users can consult the FitBot AI or use the Food Estimator to stay on track                       throughout their journey.
+---
