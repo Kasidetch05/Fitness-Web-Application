@@ -5,7 +5,7 @@ Introduction
 FitLife is a personalized fitness motivation and nutrition platform. It is a comprehensive, AI-powered web application designed to help users transform their body and mind through data-driven fitness planning. By combining traditional physiological formulas with modern AI capabilities, FitLife provides a personalized roadmap for anyone looking to lose weight, gain muscle, or maintain a healthy lifestyle.
 
 ---
-Key Features : 
+Key Features  
 
 - Intelligent Goal Setting : Users can define objectives—such as weight loss or muscle gain—and receive a plan tailored to their unique physiological profile.
 
@@ -13,7 +13,7 @@ Key Features :
 
 - Body Fat Estimation : Includes a built-in estimator utilizing the U.S. Navy Method (circumference-based) to track body composition beyond just scale weight.
 
-- AI-Powered Insights: :
+- AI-Powered Insights: 
   - FitBot AI Chat : A personalized fitness coach powered by Gemini AI to answer nutrition and exercise questions in real-time. 
   - Visual Food Estimator : Uses computer vision and AI to analyze food images and provide nutritional estimates via the device's camera.
   - Time Prediction : Predicts the timeframe for reaching weight goals based on the user's current caloric deficit or surplus.
@@ -33,4 +33,10 @@ How It Works
 2. Analysis     : The system calculates the user's BMR, TDEE, and estimated body fat percentage.
 3. Planning     : Based on the selected goal, the app generates a "Receipt" style plan detailing daily caloric and macronutrient targets.
 4. Interaction  : Users can consult the FitBot AI or use the Food Estimator to stay on track throughout their journey.
+---
+Security & Setup Note
+- For security reasons, the GEMINI_API_KEY has been removed/masked in the public repository.
+- To run the AI features locally, you must provide your own API key from the Google AI Studio.
+- The authentication system uses client-side SHA-256 hashing to demonstrate secure data handling principles.
+
 ---
