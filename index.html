@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - Transform Your Body & Mind</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-content" id="mainContent">
+        <header>
+            <nav>
+                <div class="logo">💪 FitLife</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Transform Your Body Today</h1>
+            <p>Join thousands who've achieved their fitness goals with our proven programs</p>
+            <button class="cta-button" id="startButton">Start Your Journey</button>
+        </section>
+
+        <div class="container">
+            <h2 class="section-title">Why Choose FitLife?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Goal Setting</h3>
+                    <p>Set realistic milestones and celebrate victories as you progress toward your ultimate fitness goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🥗</div>
+                    <h3>Macro Tracking</h3>
+                    <p>Receive personalized macro-nutrient goals (Protein, Carbs, Fat) based on your chosen objective.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>AI Prediction</h3>
+                    <p>Get a prediction of when you'll reach your target weight based on your current plan and progress.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 FitLife. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div class="login-page" id="loginPage">
+        <div class="login-container">
+            <a class="back-button" id="backButton">← Back to Home</a>
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Log in to access your personalized fitness plan.</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@example.com">
+                    <p class="error-message" id="emailError">User not found.</p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                    <p class="error-message" id="passwordError">Incorrect password.</p>
+                </div>
+                <div class="forgot-password">
+                    <a id="forgotLink">Forgot Password?</a>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+            <div class="divider">OR</div>
+            <div class="create-account">
+                <p>Don't have an account?</p>
+                <button class="create-account-button" id="createButton">Create an Account</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="signup-page" id="signupPage">
+        <div class="signup-container">
+            <a class="back-button" id="backToLoginButton">← Back to Login</a>
+            <div class="signup-header">
+                <h2>Create Your FitLife Account</h2>
+                <p>Start your journey toward a healthier you.</p>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="login-button">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="reset-page" id="resetPage">
+        <div class="reset-container">
+            <a class="back-button" id="backToLoginBtn">← Back to Login</a>
+            <div class="reset-header">
+                <h2>Reset Password</h2>
+                <p>Enter your new password below.</p>
+            </div>
+            <div class="success-message" id="successMessage">Password successfully reset! Redirecting to login...</div>
+            <form id="resetForm">
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" required placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <input type="password" id="confirmNewPassword" required placeholder="••••••••">
+                    <p class="error-message" id="resetPasswordError">Passwords do not match.</p>
+                </div>
+                <button type="submit" class="login-button">Change Password</button>
+            </form>
+            <div style="text-align: center; margin-top: 15px;">
+                <button class="create-account-button" id="backToLoginFromReset" style="width: auto;">Cancel & Return to Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-page" id="statsPage">
+        <div class="login-container">
+            <a class="back-button" id="backToLogin" onclick="showPage(loginPage)">← Back to Login</a>
+            <div class="stats-header login-header">
+                <h2>Your Current Stats</h2>
+                <p>Tell us a bit about yourself to calculate your TDEE and Body Fat.</p>
+            </div>
+            <form id="statsForm">
+                <div class="form-group">
+                    <label for="userGender">Gender</label>
+                    <select id="userGender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="userAge">Age (Years)</label>
+                    <input type="number" id="userAge" required min="10" max="100" placeholder="e.g., 30">
+                </div>
+                <div class="form-group">
+                    <label for="userHeight">Height (cm)</label>
+                    <input type="number" id="userHeight" required min="100" max="250" placeholder="e.g., 175">
+                </div>
+                <div class="form-group">
+                    <label for="userWeight">Current Weight (kg)</label>
+                    <input type="number" id="userWeight" required min="30" max="300" step="0.1" placeholder="e.g., 75.5">
+                </div>
+                <div class="form-group">
+                    <label for="userTargetWeight">Target Weight (kg)</label>
+                    <input type="number" id="userTargetWeight" required min="30" max="300" step="0.1" placeholder="e.g., 70">
+                </div>
+                <div class="form-group">
+                    <label for="userNeck">Neck Circumference (cm) - Optional</label>
+                    <input type="number" id="userNeck" min="0" max="100" step="0.1" placeholder="e.g., 38">
+                </div>
+                <div class="form-group">
+                    <label for="userWaist">Waist Circumference (cm) - Optional</label>
+                    <input type="number" id="userWaist" min="0" max="200" step="0.1" placeholder="e.g., 85">
+                </div>
+                <div class="form-group" id="hipGroup" style="display: none;">
+                    <label for="userHip">Hip Circumference (cm) - Optional (Females)</label>
+                    <input type="number" id="userHip" min="0" max="200" step="0.1" placeholder="e.g., 100">
+                </div>
+                <div class="form-group">
+                    <label for="userActivity">Activity Level</label>
+                    <select id="userActivity" required>
+                        <option value="">Select Activity Level</option>
+                        <option value="1.2">Sedentary (little or no exercise)</option>
+                        <option value="1.375">Lightly Active (light exercise/sports 1-3 days/week)</option>
+                        <option value="1.55">Moderately Active (moderate exercise/sports 3-5 days/week)</option>
+                        <option value="1.725">Very Active (hard exercise/sports 6-7 days/week)</option>
+                        <option value="1.9">Extra Active (very hard exercise/physical job)</option>
+                    </select>
+                </div>
+                <button type="submit" class="login-button">Calculate & Set Goal</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="goal-page" id="goalPage">
+        <div class="login-container">
+            <a class="back-button" id="backToStatsPage">← Back to Stats</a>
+            <div class="stats-header login-header">
+                <h2>Your Fitness Goal</h2>
+                <p id="goalSubtitle">Select the primary objective for your fitness journey.</p>
+            </div>
+            
+            <div class="goal-options" id="goalOptions">
+                <button class="goal-button" data-goal="Lose Weight">
+                    📉 Lose Weight - Create a calorie deficit to burn fat.
+                </button>
+                <button class="goal-button" data-goal="Maintain Weight">
+                    ⚖️ Maintain Weight - Sustain current body weight and composition.
+                </button>
+                <button class="goal-button" data-goal="Gain Muscle/Weight">
+                    💪 Gain Muscle/Weight - Create a calorie surplus for hypertrophy.
+                </button>
+            </div>
+
+            <button id="goalContinueButton" class="login-button" disabled>Show My Plan</button>
+
+            <div class="dashboard-section">
+                <div class="dashboard-card body-fat-card" id="bodyFatResults" style="display: none;">
+                    <h3>Body Composition Estimate</h3>
+                    <div class="bf-result">
+                        <span class="bf-value" id="bodyFatTarget">--%</span>
+                        <span class="bf-label">Body Fat</span>
+                    </div>
+                    <p class="bf-message" id="bodyFatMessage"></p>
+                </div>
+
+                <div class="dashboard-card nutrition-card" id="nutritionResults" style="display: none;">
+                    <h3>Daily Nutrition Targets (<span id="targetCaloriesDisplay">--</span> kcal)</h3>
+                    <div class="macro-container">
+                        <div class="macro-item">
+                            <span class="macro-value" id="proteinTarget">--g</span>
+                            <span class="macro-label">Protein</span>
+                        </div>
+                        <div class="macro-item">
+                            <span class="macro-value" id="carbTarget">--g</span>
+                            <span class="macro-label">Carbs</span>
+                        </div>
+                        <div class="macro-item">
+                            <span class="macro-value" id="fatTarget">--g</span>
+                            <span class="macro-label">Fat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card prediction-card" id="predictionResults" style="display: none;">
+                    <h3>Goal Prediction</h3>
+                    <div class="bf-result">
+                        <span class="bf-value" id="predictedTime">--</span>
+                        <span class="bf-label">Days Until Goal</span>
+                    </div>
+                    <p class="bf-message" id="predictionMessage"></p>
+                </div>
+                
+                <div class="dashboard-card recommendation-card" id="recommendationResults" style="display: none;">
+                    <h3>Suggested Food Sources (Top 3)</h3>
+                    <ul class="recommendation-list" id="recommendationList"></ul>
+                </div>
+
+                 <div class="dashboard-card exercise-recommendation-card" id="exerciseRecommendationResults" style="display: none;">
+                    <h3>Suggested Workouts (Top 4)</h3>
+                    <ul class="recommendation-list" id="exerciseRecommendationList"></ul>
+                </div>
+            </div>
+             <div class="ai-features-container">
+                <button class="cta-button ai-feature-button" id="openEstimatorButton" style="display: none;">
+                    📸 Calorie Estimator
+                </button>
+                <button class="cta-button ai-feature-button" id="openChatButton" style="display: none;">
+                    💬 Chat with FitBot
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="food-estimator-page" id="foodEstimatorPage">
+        <div class="estimator-container">
+            <a class="back-button" id="backToGoalFromEstimator">← Back to Plan</a>
+            <div class="estimator-header">
+                <h2>📸 Food Calorie Estimator</h2>
+                <p>Point your camera at the food to get an instant calorie estimate using AI Vision.</p>
+            </div>
+            
+            <div class="camera-stream-container">
+                <video id="videoElement" autoplay playsinline></video>
+                <canvas id="canvasElement" style="display: none;"></canvas>
+            </div>
+
+            <p class="estimator-status" id="estimatorStatus">Press Start Camera to begin.</p>
+            
+            <button id="captureButton" class="login-button" disabled>Capture & Estimate Calories</button>
+
+            <div class="estimator-results" id="estimatorResults">
+                </div>
+        </div>
+    </div>
+
+    <div class="food-receipt-page" id="foodReceiptPage">
+        <div class="receipt-container login-container">
+            <a class="back-button" id="backToGoalPage">← Back to Plan</a>
+            <div class="receipt-header">
+                <h2>Full Nutrition Plan</h2>
+                <p id="foodReceiptSubTitle">The following food sources are tailored to your Macro Targets and Goal.</p>
+            </div>
+            <div class="receipt-content">
+                <ul class="recommendation-list" id="receiptFoodList">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="exercise-receipt-page" id="exerciseReceiptPage">
+        <div class="receipt-container login-container">
+            <a class="back-button" id="backToGoalPageFromExercise">← Back to Plan</a>
+            <div class="receipt-header">
+                <h2>Full Workout Plan</h2>
+                <p id="exerciseReceiptSubTitle">The following plan is tailored to your Activity Level and Goal.</p>
+            </div>
+            <div class="receipt-content">
+                <ul class="recommendation-list" id="receiptExerciseList">
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="chat-page" id="chatPage">
+        <div class="chat-container">
+            <a class="back-button" id="backToGoalFromChat">← Back to Plan</a>
+            <div class="chat-header">
+                <h2>Chat with FitBot AI</h2>
+                <p>Your personalized fitness coach is here to help!</p>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message-bubble bot-message">
+                    Hello! I'm FitBot. I see your goal is to [Goal] and your daily calorie target is [Calories]. How can I assist with your plan today?
+                </div>
+            </div>
+            <form class="chat-input-form" id="chatForm">
+                <input type="text" id="chatInput" placeholder="Ask about exercises, nutrition, or motivation..." required>
+                <button type="submit" class="send-button">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="custom-alert" class="custom-alert">
+        <div class="alert-content" id="alert-content">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
