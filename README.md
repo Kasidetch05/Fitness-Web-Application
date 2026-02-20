@@ -40,6 +40,7 @@ Security & Setup Note
 - The authentication system uses client-side SHA-256 hashing to demonstrate secure data handling principles.
 
 ---
-Picture of the Project ( Front Page )
+Picture of the Project 
 
-<img width="1251" height="600" alt="image" src="https://github.com/user-attachments/assets/ed7893c4-ebd1-45bf-955e-b3f6ffe5d3b1" />
+<img width="1890" height="914" alt="image" src="https://github.com/user-attachments/assets/221ff50f-b08d-432a-a216-afa961eefc07" />
+
